@@ -17,7 +17,11 @@
     <div class="container">
         <div class="admin-product-form-container">
             <form action="<?php $_SERVER['PHP_SELF']?>" method="post" enctype="multipart/form-data"></form>
+            <h3>Adicionar um novo produto</h3>
             <input type="text" placeholder="Digite o nome do produto" name="product_name" class="box">
+            <input type="number" placeholder="Digite o preço" name="product_price" class="box">
+            <input type="file" acept="image/png, image/jpeg, image/jpg" name="product_image" class="box">
+            <input type="submit" class="btn" name="add_product" value="adicionar produto">
         </div>
     </div>
 </body>
