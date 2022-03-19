@@ -21,6 +21,22 @@ html{
     overflow: hidden;
 }
 
+.btn{
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    font-size: 1.7rem;
+    padding: 1rem 3rem;
+    background: $green;
+    color: $white;
+
+    &:hover{
+        background: $black;
+    }
+}
+
 .container{
     max-width: 1200px;
     padding: 2rem;
@@ -40,6 +56,15 @@ html{
                 margin-bottom: 1rem;
                 text-align: center;
                 font-size: 2.5rem;
+            }
+
+            .box{
+                width: 100%;
+                border-radius: 0.5rem;
+                padding: 1.2rem 1.5rem;
+                font-size: 1.7rem;
+                margin: 1rem 0;
+                background: $white;
             }
         }
     }
