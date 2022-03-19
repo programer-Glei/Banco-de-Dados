@@ -1,3 +1,15 @@
+<?php
+
+@include 'config.php';
+
+isset($_POST['add_product']){
+
+    $product_name = $_POST['add_product'];
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

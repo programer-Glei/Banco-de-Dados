@@ -60,4 +60,17 @@ html {
   margin: 1rem 0;
   background: #fff;
 }
+
+/* media queries */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
 /*# sourceMappingURL=estilo.css.map */
