@@ -31,6 +31,16 @@ html {
   background: #333;
 }
 
+.message {
+  display: block;
+  background: #eee;
+  padding: 1.5rem 1rem;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
 .container {
   max-width: 1200px;
   padding: 2rem;
