@@ -21,6 +21,16 @@ html{
     overflow: hidden;
 }
 
+.mensagem{
+    display: block;
+    background: $bg-color;
+    padding: 1.5rem 1rem;
+    font-size: 2rem;
+    color: $black;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
 .btn{
     display: block;
     width: 100%;
@@ -37,14 +47,8 @@ html{
     }
 }
 
-.message{
-    display: block;
-    background: $bg-color;
-    padding: 1.5rem 1rem;
-    font-size: 2rem;
-    color: $black;
-    margin-bottom: 2rem;
-    text-align: center;
+.novo{
+    background: blue;
 }
 
 .container{

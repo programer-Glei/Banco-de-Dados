@@ -15,6 +15,10 @@ html {
   overflow: hidden;
 }
 
+.mensagem {
+  font-size: 2rem;
+}
+
 .btn {
   display: block;
   width: 100%;
@@ -29,16 +33,6 @@ html {
 
 .btn:hover {
   background: #333;
-}
-
-.message {
-  display: block;
-  background: #eee;
-  padding: 1.5rem 1rem;
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 2rem;
-  text-align: center;
 }
 
 .container {
