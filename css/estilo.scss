@@ -37,6 +37,15 @@ html{
     }
 }
 
+.message{
+    display: block;
+    background: $bg-color;
+    padding: 1.5rem 1rem;
+    font-size: 2rem;
+    color: $black;
+    margin-bottom: 2rem;
+}
+
 .container{
     max-width: 1200px;
     padding: 2rem;
