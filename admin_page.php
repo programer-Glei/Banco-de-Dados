@@ -2,9 +2,18 @@
 
 @include 'config.php';
 
-isset($_POST['add_product']){
+if(isset($_POST['add_product'])){
 
-    $product_name = $_POST['add_product'];
+    $product_name = $_POST['add_name'];
+    $product_price = $_POST['add_price'];
+    $product_image = $_POST['add_image']['name'];
+    $product_image_tmp_name = $_POST['add_image']['tmp_name'];
+    $product_image_folder = 'uploaded_img/'.$product_image;
+
+    if(empty($product_name) || empty($product_price) || empty($product_image)){
+
+        $message[] = 'por favor preencha todos';
+    }
 }
 
 ?>
