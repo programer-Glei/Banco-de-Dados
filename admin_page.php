@@ -35,6 +35,15 @@ if(isset($_POST['add_product'])){
     <title>Página de administração</title>
 </head>
 <body>
+    <?php
+
+    if(isset($message)){
+        foreach($message as $message){
+            echo '<span class="message">'.$message.'</span>';
+        }
+    }
+
+    ?>
     <div class="container">
         <div class="admin-product-form-container">
             <form action="<?php $_SERVER['PHP_SELF']?>" method="post" enctype="multipart/form-data">
