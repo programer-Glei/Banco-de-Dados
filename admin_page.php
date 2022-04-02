@@ -51,7 +51,7 @@ if(isset($_POST['add_product'])){
                 <input type="text" placeholder="Digite o nome do produto" name="product_name" class="box">
                 <input type="number" placeholder="Digite o preço" name="product_price" class="box">
                 <input type="file" acept="image/png, image/jpeg, image/jpg" name="product_image" class="box">
-                <input type="submit" class="novo" name="add_product" value="adicionar produto">
+                <input type="submit" class="btn" name="add_product" value="adicionar produto">
             </form>
         </div>
     </div>
