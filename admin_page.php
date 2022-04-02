@@ -14,7 +14,7 @@ if(isset($_POST['add_product'])){
 
         $message[] = 'Por favor preencha todos os campos';
     }else{
-        $insert = "INSERT INTO produtos(name, price, image) VALUES('$product_name','$product_price')";
+        $insert = "INSERT INTO produtos(name, price, image) VALUES('$product_name','$product_price','$product_image')";
         $upload = mysqli_query($conn,$insert);
         if($upload){
             move_uploaded_file($product_image_tmp_name, $product_image_folder);
@@ -63,6 +63,23 @@ if(isset($_POST['add_product'])){
                 <input type="submit" class="btn" name="add_product" value="adicionar produto">
             </form>
         </div>
+    </div>
+
+    <?php
+        $select = mysqli_query($conn, "SELECT * FROM produtos");
+    ?>
+
+    <div class="product-display">
+        <table class="product-display-table">
+            <thead>
+                <tr>
+                    <td>Imagem do Produto</td>
+                    <td>Nome do produto</td>
+                    <td>Preço do produto</td>
+                    <td>Ação</td>
+                </tr>
+            </thead>
+        </table>
     </div>
 </body>
 </html>
