@@ -12,7 +12,16 @@ if(isset($_POST['add_product'])){
 
     if(empty($product_name) || empty($product_price) || empty($product_image)){
 
-        $message[] = 'por favor preencha todos';
+        $message[] = 'Por favor preencha todos os campos';
+    }else{
+        $insert = "INSERT INTO produtos(name, price, image) VALUES('$product_name','$product_price')";
+        $upload = mysqli_query($conn,$insert);
+        if($upload){
+            move_uploaded_file($product_image_tmp_name, $product_image_folder);
+            $message[] = 'Produto adicionado sucesso';
+        }else{
+            $message[] = 'não foi possível adicionar o produto';
+        }
     }
 }
 
