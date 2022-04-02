@@ -71,6 +71,25 @@ html {
   background: #fff;
 }
 
+.container .product-display {
+  margin: 2rem 0;
+}
+
+.container .product-display .product-display-table {
+  width: 100%;
+  text-align: center;
+}
+
+.container .product-display .product-display-table thead {
+  background: #eee;
+}
+
+.container .product-display .product-display-table td {
+  padding: 1rem;
+  font-size: 2rem;
+  border-bottom: 0.1rem solid #333;
+}
+
 /* media queries */
 @media (max-width: 991px) {
   html {

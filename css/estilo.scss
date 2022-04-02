@@ -79,7 +79,27 @@ html{
             }
         }
     }
+
+    .product-display{
+        margin: 2rem 0;
+    
+        .product-display-table{
+            width: 100%;
+            text-align: center;
+    
+            thead{
+                background: $bg-color;
+            }
+
+            td{
+                padding: 1rem;
+                font-size: 2rem;
+                border-bottom: $border;
+            }
+        }
+    }
 }
+
 
 /* media queries */
 @media (max-width: 991px){

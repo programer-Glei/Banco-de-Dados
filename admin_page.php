@@ -61,25 +61,26 @@ if(isset($_POST['add_product'])){
                 <input type="number" placeholder="Digite o preço" name="product_price" class="box">
                 <input type="file" acept="image/png, image/jpeg, image/jpg" name="product_image" class="box">
                 <input type="submit" class="btn" name="add_product" value="adicionar produto">
-            </form>
+            </form>            
+        </div>
+
+        <?php
+            $select = mysqli_query($conn, "SELECT * FROM produtos");
+        ?>
+
+        <div class="product-display">
+            <table class="product-display-table">
+                <thead>
+                    <tr>
+                        <td>Imagem do Produto</td>
+                        <td>Nome do produto</td>
+                        <td>Preço do produto</td>
+                        <td colspan="2">Ação</td>
+                    </tr>
+                </thead>
+            </table>
         </div>
     </div>
 
-    <?php
-        $select = mysqli_query($conn, "SELECT * FROM produtos");
-    ?>
-
-    <div class="product-display">
-        <table class="product-display-table">
-            <thead>
-                <tr>
-                    <td>Imagem do Produto</td>
-                    <td>Nome do produto</td>
-                    <td>Preço do produto</td>
-                    <td>Ação</td>
-                </tr>
-            </thead>
-        </table>
-    </div>
 </body>
 </html>
