@@ -73,6 +73,7 @@ html {
 
 .container .product-display {
   margin: 2rem 0;
+  overflow-y: scroll;
 }
 
 .container .product-display .product-display-table {
@@ -94,6 +95,9 @@ html {
 @media (max-width: 991px) {
   html {
     font-size: 55%;
+  }
+  .product-display .product-display-table {
+    width: 80rem;
   }
 }
 

@@ -78,6 +78,17 @@ if(isset($_POST['add_product'])){
                         <td colspan="2">Ação</td>
                     </tr>
                 </thead>
+
+                <?php
+                    while($row = mysqli_fetch_assoc($select)){
+                ?>
+                <tr>
+                    <td><img src="uploaded_img/<?php $row['image']; ?>" height="100" alt=""></td>
+                    <td>Nome do produto</td>
+                    <td>Preço do produto</td>
+                    <td colspan="2">Ação</td>
+                </tr>
+                <?php }; ?>
             </table>
         </div>
     </div>
