@@ -72,10 +72,10 @@ if(isset($_POST['add_product'])){
             <table class="product-display-table">
                 <thead>
                     <tr>
-                        <td>Imagem do Produto</td>
-                        <td>Nome do produto</td>
-                        <td>Preço do produto</td>
-                        <td colspan="2">Ação</td>
+                        <th>Imagem do Produto</th>
+                        <th>Nome do produto</th>
+                        <th>Preço do produto</th>
+                        <th>Ação</th>
                     </tr>
                 </thead>
 
@@ -84,9 +84,9 @@ if(isset($_POST['add_product'])){
                 ?>
                 <tr>
                     <td><img src="uploaded_img/<?php $row['image']; ?>" height="100" alt=""></td>
-                    <td>Nome do produto</td>
-                    <td>Preço do produto</td>
-                    <td colspan="2">Ação</td>
+                    <td><?php $row['name']; ?></td>
+                    <td><?php $row['price']; ?></td>
+                    <th>Ação</th>
                 </tr>
                 <?php }; ?>
             </table>
