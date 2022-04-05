@@ -82,7 +82,6 @@ html{
 
     .product-display{
         margin: 2rem 0;
-        overflow-y: scroll;
     
         .product-display-table{
             width: 100%;
@@ -114,6 +113,7 @@ html{
 @media (max-width: 768px){
 
     .product-display{
+        overflow-y: scroll;
     
         .product-display-table{
             width: 80rem;

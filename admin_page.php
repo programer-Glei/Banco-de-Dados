@@ -83,9 +83,9 @@ if(isset($_POST['add_product'])){
                     while($row = mysqli_fetch_assoc($select)){
                 ?>
                 <tr>
-                    <td><img src="uploaded_img/<?php $row['image']; ?>" height="100" alt=""></td>
-                    <td><?php $row['name']; ?></td>
-                    <td><?php $row['price']; ?></td>
+                    <td><img src="uploaded_img/<?php echo $row['image']; ?>" height="100" alt=""></td>
+                    <td><?php echo $row['name']; ?></td>
+                    <td>R$<?php echo $row['price']; ?></td>
                     <th>Ação</th>
                 </tr>
                 <?php }; ?>
