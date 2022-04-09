@@ -96,6 +96,18 @@ html{
                 font-size: 2rem;
                 border-bottom: $border;
             }
+
+            .btn:first-child{
+                margin-top: 0;
+            }
+
+            .btn:last-child{
+                background: crimson;
+
+                &:hover{
+                    background: $black;
+                }
+            }
         }
     }
 }

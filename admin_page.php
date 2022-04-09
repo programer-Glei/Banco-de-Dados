@@ -86,7 +86,10 @@ if(isset($_POST['add_product'])){
                     <td><img src="uploaded_img/<?php echo $row['image']; ?>" height="100" alt=""></td>
                     <td><?php echo $row['name']; ?></td>
                     <td>R$<?php echo $row['price']; ?></td>
-                    <th>Ação</th>
+                    <td>
+                        <a href="admin_update.php?edit=<?php echo $row['id']; ?>" class="btn"> <i class="fas fa-edit"> Editar</i></a>
+                        <a href="admin_page.php?delete=<?php echo $row['id']; ?>" class="btn"> <i class="fas fa-trash"> Deletar</i></a>
+                    </td>
                 </tr>
                 <?php }; ?>
             </table>

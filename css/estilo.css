@@ -90,6 +90,18 @@ html {
   border-bottom: 0.1rem solid #333;
 }
 
+.container .product-display .product-display-table .btn:first-child {
+  margin-top: 0;
+}
+
+.container .product-display .product-display-table .btn:last-child {
+  background: crimson;
+}
+
+.container .product-display .product-display-table .btn:last-child:hover {
+  background: #333;
+}
+
 /* media queries */
 @media (max-width: 991px) {
   html {
