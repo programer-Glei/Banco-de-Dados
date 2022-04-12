@@ -1,3 +1,35 @@
+
+<?php
+
+@include 'config.php';
+
+$id = $_GET['id'];
+
+if(isset($_POST['update_product'])){
+
+    $product_name = $_POST['product_name'];
+    $product_price = $_POST['product_price'];
+    $product_image = $_FILES['product_image']['name'];
+    $product_image_tmp_name = $_FILES['product_image']['tmp_name'];
+    $product_image_folder = 'uploaded_img/'.$product_image;
+
+    if(empty($product_name) || empty($product_price) || empty($product_image)){
+
+        $message[] = 'Por favor preencha todos os campos';
+    }else{
+        $update = "UPDATE produtos SET name='$product_name', price='$product_price', image='$product_image' WHERE id=$id";
+        $upload = mysqli_query($conn,$update);
+        if($upload){
+            move_uploaded_file($product_image_tmp_name, $product_image_folder);
+            $message[] = 'Produto adicionado sucesso';
+        }else{
+            $message[] = 'não foi possível adicionar o produto';
+        }
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
