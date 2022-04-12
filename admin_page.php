@@ -25,6 +25,12 @@ if(isset($_POST['add_product'])){
     }
 }
 
+if(isset($GET['delete'])){
+    $id = $GET['delete'];
+    mysqli_query($conn, "DELETE FROM produtos WHERE id = $id");
+    header('location:admin_page.php');
+}
+
 ?>
 
 
