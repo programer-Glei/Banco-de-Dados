@@ -21,7 +21,6 @@ if(isset($_POST['update_product'])){
         $upload = mysqli_query($conn,$update);
         if($upload){
             move_uploaded_file($product_image_tmp_name, $product_image_folder);
-            $message[] = 'Produto adicionado sucesso';
         }else{
             $message[] = 'não foi possível adicionar o produto';
         }
@@ -57,14 +56,19 @@ if(isset($message)){
 
     <div class="container">
         <div class="admin-product-form-container centered">
+            <?php
+                $select = mysqli_query($conn,"SELECT * FROM produtos WHERE id = $id")
+                while($row = mysqli_fetch_assoc($select)){
+            ?>
             <form action="<?php $_SERVER['PHP_SELF']?>" method="post" enctype="multipart/form-data">
                 <h3>Atualize o produto</h3>
-                <input type="text" placeholder="Digite o nome do produto" name="product_name" class="box">
-                <input type="number" placeholder="Digite o preço" name="product_price" class="box">
+                <input type="text" placeholder="Digite o nome do produto" value="<?php $row['name']; ?>" name="product_name" class="box">
+                <input type="number" placeholder="Digite o preço" value="<?php $row['price']; ?>" name="product_price" class="box">
                 <input type="file" acept="image/png, image/jpeg, image/jpg" name="product_image" class="box">
                 <input type="submit" class="btn" name="update_product" value="Atualizar produto">
                 <a href="admin_page.php" class="btn">Voltar</a>
-            </form>            
+            </form>
+            <?php };?>          
         </div>
     </div>
 </body>
