@@ -26,11 +26,12 @@ if(isset($message)){
     <div class="container">
         <div class="admin-product-form-container centered">
             <form action="<?php $_SERVER['PHP_SELF']?>" method="post" enctype="multipart/form-data">
-                <h3>Adicionar um novo produto</h3>
+                <h3>Atualize o produto</h3>
                 <input type="text" placeholder="Digite o nome do produto" name="product_name" class="box">
                 <input type="number" placeholder="Digite o preço" name="product_price" class="box">
                 <input type="file" acept="image/png, image/jpeg, image/jpg" name="product_image" class="box">
-                <input type="submit" class="btn" name="update_product" value="atualizar produto">
+                <input type="submit" class="btn" name="update_product" value="Atualizar produto">
+                <a href="admin_page.php" class="btn">Voltar</a>
             </form>            
         </div>
     </div>

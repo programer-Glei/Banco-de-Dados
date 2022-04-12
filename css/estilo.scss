@@ -41,6 +41,7 @@ html{
     padding: 1rem 3rem;
     background: $green;
     color: $white;
+    text-align: center;
 
     &:hover{
         background: $black;
@@ -77,6 +78,13 @@ html{
                 margin: 1rem 0;
                 background: $white;
             }
+        }
+
+        &.centered {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
         }
     }
 

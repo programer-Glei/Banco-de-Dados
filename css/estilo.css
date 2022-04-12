@@ -35,6 +35,7 @@ html {
   padding: 1rem 3rem;
   background: #27ae60;
   color: #fff;
+  text-align: center;
 }
 
 .btn:hover {
@@ -69,6 +70,19 @@ html {
   font-size: 1.7rem;
   margin: 1rem 0;
   background: #fff;
+}
+
+.container .admin-product-form-container.centered {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
 }
 
 .container .product-display {
